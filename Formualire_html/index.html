@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>entrainnement formulaire</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="group">
+        <label for="text">mon texte</label>
+        <input type="text" name="text" id="text" />
+      </div>
+
+      <div class="group">
+        <label for="pass">mon password</label>
+        <input type="password" name="pass" id="pass" />
+      </div>
+
+      <div class="group">
+        <label for="check">case à cocher</label>
+        <input type="checkbox" value="choix1" name="check" id="check" />
+      </div>
+
+      <div class="group radioDiv">
+        <p>Choisir un bouton</p>
+        <label for="radio1">bouton 1</label>
+        <input type="radio" value="radio1" name="radio" id="radio1" />
+
+        <label for="radio2">bouton 2</label>
+        <input type="radio" value="radio2" name="radio" id="radio2" />
+
+        <label for="radio3">bouton 3</label>
+        <input type="radio" value="radio3" name="radio" id="radio3" />
+
+        <label for="radio4">bouton 4</label>
+        <input type="radio" value="radio4" name="radio" id="radio4" />
+
+        <label for="radio5">bouton 5</label>
+        <input type="radio" value="radio5" name="radio" id="radio5" />
+
+        <label for="radio6">bouton 6</label>
+        <input type="radio" value="radio6" name="radio" id="radio6" />
+      </div>
+
+      <div class="group">
+        <label for="list">Choisir une valeur</label>
+        <select name="list" id="list" multiple>
+          <option value="premier" selected>premier</option>
+          <option value="deuxieme">deuxieme</option>
+          <option value="troisieme" selected>troisieme</option>
+        </select>
+      </div>
+
+      <div class="group">
+        <p>Un commentaire</p>
+        <textarea></textarea>
+      </div>
+      <div class="group">
+        <button type="submit">alert_formulaire_simple</button>
+      </div>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>

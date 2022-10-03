@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery !</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript"
+	src="jquery.min.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+"use strict";
+
+$(document).ready(function(){
+    var link = $("<a>", {
+        href : "http://www.afip.fr",
+        title: "Allez sur le site de l'école !",
+    });
+	link.text("Site de EdenSchool");
+	$('.menu').replaceWith(link);
+});
+  
+// ]]>
+</script>
+</head>
+<body>
+	Ajouter "Site de EdenSchool" dans le texte du lien et remplacer le menu par le lien avec replaceWith
+	<div id="menu">
+		<ul class="menu">
+		</ul>
+	</div>
+	<div id="contenu">
+		<h1>jQuery</h1>
+		<p>
+			Retrouvez la documentation officielle sur le site de <a
+				href="http://jquery.com/">jQuery</a>.
+		</p>
+		<h2 id="selecteurs">Sélecteurs</h2>
+		<h3>Définition</h3>
+		<p>
+			Ce sont des expressions qui permettent de <strong>sélectionner</strong>
+			des éléments dans l'arbre DOM. Retrouvez la documentation officielle
+			sur <a href="http://api.jquery.com/category/selectors/">la page
+				des sélecteurs jQuery</a>.
+		</p>
+		<h3>Exemples de sélecteurs</h3>
+		<table class="syntax">
+			<tr>
+				<th>Type</th>
+				<th>Syntaxe</th>
+			</tr>
+			<tr>
+				<td>Par nom d'élément</td>
+				<td>$("nomElt")</td>
+			</tr>
+			<tr>
+				<td>Par identifiant</td>
+				<td>$("#id")</td>
+			</tr>
+			<tr>
+				<td>Par class</td>
+				<td>$(".nomClasse")</td>
+			</tr>
+		</table>
+		<h2 id="operations">Opérations sur l'arbre DOM</h2>
+		<p>…</p>
+	</div>
+
+</body>
+</html>

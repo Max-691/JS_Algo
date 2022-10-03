@@ -1,0 +1,44 @@
+#chess{
+    border: solid 10px black;
+    height: max-content;
+    width: max-content;
+}
+
+.cases{
+    width: 5rem;
+    height: 5rem;
+}
+
+.lignes{
+    display: flex;
+
+}
+
+.lignes:nth-child(odd) .cases:nth-child(even){
+    background-color: black;
+}
+
+.lignes:nth-child(even) .cases:nth-child(odd){
+    background-color: black;
+}
+
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+
+#content ul{list-style: none; padding: 0; display: flex;}
+#content ul li{margin-left: 5rem; padding: 1rem;}
+#renduMenu{
+    background-color: purple;
+    padding: 2rem;
+}
+
+.li-color{
+    background-color: purple;
+}
+.click{
+    background-color: rgb(162, 100, 221);
+}
