@@ -1,4 +1,5 @@
 //5.9 lire suite des prix en euros entiers terminée par 0. Calculer somme, lire la somme et simuler remise de la monnaie en affichant "10€", "5€", "1€" autant de fois qu'il y a de coupures de chaque sorte à rendre
+//PROBLEME DANS RENTE DE MONNAIE (50 P1 AU LIEU DE 5 B10)
 /*
 let prix = 1; //prix entré par user
 let pay; //nombre que user entre pour payer
@@ -12,8 +13,6 @@ while (prix !== 0) {
 }
 pay = parseInt(prompt("combien payez vous ? (entrez un nombre)"));
 l = pay - total; //total - pay
-
-//alert('pour un total à payer de: '+ total + " vous avez payé: " + pay);
 
 if (l < 0) {
   alert("il vous reste" + l + " à payer");
@@ -87,55 +86,6 @@ for (let i = 0; i < 9; i++) {
 console.log(result);
 */
 
-//6.8 user rentre nombres, afficher combien son positifs et négatifs
-/*
-const nombre = prompt('combien de nombres');
-let entry;
-let positif = 0;
-let negatif = 0;
-for (let i = 1; i <= nombre; i++) {
-  entry = parseInt(prompt('entrez les nombres'));
-  if (entry >= 0) {
-    positif++;
-  }
-  else{
-    negatif++;
-  }
-}
-console.log(positif, negatif);
-*/
-
-//6.10 créer un tableau à partir de 2 tableaux le nouveau tableau contiendra la somme des éléments des 2 tableaux
-/*
-const tb1 = [1, 2, 3, 4, 5, 6];
-const tb2 = [7, 8, 9, 10, 11, 12];
-let tb3 = [];
-let somme = 0;
-for (let i = 0; i < tb1.length; i++) {
-  somme = tb1[i] + tb2[i];
-  tb3.push(somme);
-}
-console.log(tb3);
-*/
-
-//générer échequier dynamiquement (js boucles) 8x8
-/*
-const chess = document.getElementById('chess');
-const num = parseInt(prompt('nb of cases'));
-
-for (let i = 1; i <= num; i++) {
-    const lignes = document.createElement('div');
-    lignes.setAttribute('class', 'lignes');
-    chess.appendChild(lignes);
-  for (let j = 1; j <= num; j++) {
-    const cases = document.createElement('div');
-    cases.setAttribute('class', 'cases');
-    lignes.appendChild(cases);
-  }
-
-}
-*/
-
 //6.11
 /*à partir de 2 tableaux calculer le schtroumpf des 2 tableaux : multiplier chaque élément du tableau 1 par chaque élément du tableau 2 et additionner le tout
 Exemple: tb1 = 4, 8, 7, 12; tb2 = 3, 6;*/
@@ -143,9 +93,9 @@ Exemple: tb1 = 4, 8, 7, 12; tb2 = 3, 6;*/
 const tb1 = [4, 8, 7, 12];
 const tb2 = [3, 6];
 let result = 0;
-for (let i = 1; i < tb1.length; i++) {
+for (let i = 1; i <= tb1.length; i++) {
 
-  for (let j = 1; j <= i; j++) {
+  for (let j = 1; j < i; j++) {
     result += tb1[i] * tb2[j] ;
   }
 }
@@ -153,8 +103,8 @@ console.log(result);
 */
 
 //afficher nb pairs avec tirets entre sauf pour le dernier
-/*
-let display;
+
+let display = "";
 for (let i = 0; i <= 20; i++) {
   if (i % 2 === 0) {
     display = i + '-';
@@ -164,7 +114,7 @@ for (let i = 0; i <= 20; i++) {
   }
 }
 console.log(display);
-*/
+
 
 //créer tableau multidimensionel qui représente panier achat, contenu: cocal 3 bouteilles à 0.99€ l'unité; 4 packs de bière à 5€ unité; 2 bouteilles wisky à 15€ unité
 //calculer prix total du panier avec détails des achats

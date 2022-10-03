@@ -1,0 +1,30 @@
+#chess{
+    border: solid 10px black;
+    height: max-content;
+    width: max-content;
+}
+
+.cases{
+    width: 5rem;
+    height: 5rem;
+}
+
+.lignes{
+    display: flex;
+
+}
+
+.lignes:nth-child(odd) .cases:nth-child(even){
+    background-color: black;
+}
+
+.lignes:nth-child(even) .cases:nth-child(odd){
+    background-color: black;
+}
+
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}

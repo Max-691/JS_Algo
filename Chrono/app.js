@@ -12,42 +12,45 @@ let sec = 0;
 let min = 0;
 time.textContent = min + ":" + sec;
 start.addEventListener("click", () => {
-  let interval = setInterval(function () {
-    sec++;
-    if (min < 10) {
-      //affichage du 0 devant si chiffre
-      time.textContent = "0" + min + ":" + sec;
-    }
-    if (sec < 10) {
-      //affichage du 0 devant si chiffre
-      time.textContent = min + ":" + "0" + sec;
-    }
-
-    if (sec === 60) {
-      min++;
+  if (sec === 0) {
+    let interval = setInterval(function () {
+      sec++;
+      if (min < 10) {
+        //affichage du 0 devant si chiffre
+        time.textContent = "0" + min + ":" + sec;
+      }
+      if (sec < 10) {
+        //affichage du 0 devant si chiffre
+        time.textContent = min + ":" + "0" + sec;
+      }
+  
+      if (sec === 60) {
+        min++;
+        sec = 0;
+      }
+    }, 100);
+  
+    stop.addEventListener("click", () => {
+      clearInterval(interval);
+    });
+  
+    efface.addEventListener("click", () => {
+      clearInterval(interval);
       sec = 0;
-    }
-  }, 100);
-
-  stop.addEventListener("click", () => {
-    clearInterval(interval);
-  });
-
-  efface.addEventListener("click", () => {
-    clearInterval(interval);
-    sec = 0;
-    min = 0;
-    time.textContent = min + ":" + sec;
-  });
-
-  memorise.addEventListener("click", () => {
-   memoriseSec = sec;
-   memoriseMin = min;
-  });
-
-  rappel.addEventListener('click', ()=>{
-    sec = memoriseSec;
-    min = memoriseMin;
-    time.textContent = min + ":" + sec;
-  })
+      min = 0;
+      time.textContent = min + ":" + sec;
+    });
+  
+    memorise.addEventListener("click", () => {
+     memoriseSec = sec;
+     memoriseMin = min;
+    });
+  
+    rappel.addEventListener('click', ()=>{
+      sec = memoriseSec;
+      min = memoriseMin;
+      time.textContent = min + ":" + sec;
+    })
+  }
+  
 });
