@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery !</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+Au chargement de la page, mettre un fond bleu sur un tableau une ligne sur 2 et afficher les valeurs des checkbox cochées quand on clique sur un submit
+
+	<div id="menu">
+		<ul class="menu">
+			<li><a href="#selecteurs">Sélecteurs</a></li>
+			<li><a href="#operations">Opérations</a></li>
+		</ul>
+	</div>
+	<div id="contenu">
+		<h1>jQuery</h1>
+		<p>
+			Retrouvez la documentation officielle sur le site de <a
+				href="http://jquery.com/">jQuery</a>.
+		</p>
+		<h2 id="selecteurs">Sélecteurs</h2>
+		<h3>Définition</h3>
+		<p>
+			Ce sont des expressions qui permettent de <strong>sélectionner</strong>
+			des éléments dans l'arbre DOM. Retrouvez la documentation officielle
+			sur <a href="http://api.jquery.com/category/selectors/">la page
+				des sélecteurs jQuery</a>.
+		</p>
+		<h3>Exemples de sélecteurs</h3>
+		<table class="syntax">
+			<tr>
+				<th>Type</th>
+				<th>Syntaxe</th>
+			</tr>
+			<tr>
+				<td>Par nom d'élément</td>
+				<td>$("nomElt")</td>
+			</tr>
+			<tr>
+				<td>Par identifiant</td>
+				<td>$("#id")</td>
+			</tr>
+			<tr>
+				<td>Par classe</td>
+				<td>$(".nomClasse")</td>
+			</tr>
+		</table>
+		<h2 id="operations">Opérations sur l'arbre DOM</h2>
+		<form action="#" method="POST" id="operation-dom">
+            <label for="operation">Opérations à rechercher :</label> 
+            <p><input type="checkbox" name="operation" value="3"/>Navigation</p> 
+            <p><input type="checkbox" name="operation" value="2"/>Insertion</p> 
+            <p><input type="checkbox" name="operation" value="1"/>Suppression</p>
+			<p><input type="submit" value="Soumettre" /></p>
+		</form>
+	</div>
+<script src="app.js"></script>
+</body>
+</html>
