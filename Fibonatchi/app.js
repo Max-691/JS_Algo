@@ -15,6 +15,9 @@ while (distance_a + distance_b < distance) {
     distance_b += vb;
     minut++;
 }
-
+    
     console.log(minut);
 
+//vaisseau A part de la Terre en fibo(km)/min et un autre vaisseau B part de Mars en X1.6/min
+//B part à 1.6km/min
+//AU bout de combien de minutes se croisent-ils sachant qu'il y a 225 000 000km entre Terre et Mars
