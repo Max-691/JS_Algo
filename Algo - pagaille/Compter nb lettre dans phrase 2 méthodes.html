@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by anonymous (http://jsbin.com/rediyazopu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+//METHODE 1 - TOUT CONCATENER
+const letter = prompt('enter letter');
+const nbLigne = parseInt(prompt('enter nb de ligne'));
+let phrase = null;
+let count = 0;
+for(let i = 0; i < nbLigne; i++){
+  phrase += prompt('enter sentence');
+}
+for(let i = 0; i < phrase.length; i++){
+  if(phrase[i] === letter){
+    count++;
+  }
+}
+console.log(count);
+
+//METHODE 2 - FOR DANS FOR
+
+</script>
+</body>
+</html>
